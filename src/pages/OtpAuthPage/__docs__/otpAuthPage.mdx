@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import OtpAuthPage from '../otpAuthPage';
+
+<Meta title="OTP Verification via Email" component={OtpAuthPage} />
+
+# OTP Verification via Email
+
+Component for OTP verification via email. This component prompts users to enter their email address,
+sends an OTP, and verifies the OTP entered by the user.
+
+## Props
+
+- **fields**: Array of objects representing the form fields.
+- **logoUrl**: URL of the logo image to display in the component.
+- **onSendOtp**: Callback function to handle sending the OTP.
+- **onVerifyOtp**: Callback function to handle OTP verification.
+
+<Canvas>
+  <Story name="Default">
+    <OtpAuthPage
+      fields={[{ label: 'Email', type: 'email' }, { label: 'OTP', type: 'text' }]}
+      logoUrl="https://via.placeholder.com/150"
+      onSendOtp={(email) => { alert(`OTP sent to ${email}`); return true; }}
+      onVerifyOtp={(otp) => { alert(`OTP verified: ${otp}`); return 'user-token'; }}
+    />
+  </Story>
+</Canvas>

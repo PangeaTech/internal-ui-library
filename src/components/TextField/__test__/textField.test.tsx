@@ -1,0 +1,12 @@
+import React from "react";
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
+import TextField from "../textField";
+
+describe("TextField component", () => {
+  it("TextField should render correctly", () => {
+    render(<TextField />);
+    const text_field = screen.getByRole("textField");
+    expect(text_field).toBeInTheDocument();
+  });
+});
