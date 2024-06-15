@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import UsernamePasswordAuthPage from '../traditionalAuthPage';
+
+<Meta title="Username Password Authentication" component={UsernamePasswordAuthPage} />
+
+# Username Password Login
+
+This component facilitates traditional username/password authentication, user signup, and initiating the password reset process.
+
+## Props
+
+- **mode**: Determines the form mode, can be "login", "signup", or "forgotPassword".
+- **fields**: Array of objects representing the form fields.
+- **logoUrl**: URL of the logo image to display in the component.
+- **onSubmit**: Callback function to handle the login process.
+
+<Canvas>
+  <Story name="Login Mode">
+    <UsernamePasswordAuthPage
+      mode="login"
+      fields={[{ label: 'Username', type: 'text' }, { label: 'Password', type: 'password' }]}
+      logoUrl="https://via.placeholder.com/150"
+      onSubmit={(data) => { alert(`Login data: ${JSON.stringify(data)}`); return true; }}
+    />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Signup Mode">
+    <UsernamePasswordAuthPage
+      mode="signup"
+      fields={[{ label: 'Username', type: 'text' }, { label: 'Password', type: 'password' }, { label: 'Email', type: 'email' }]}
+      logoUrl="https://via.placeholder.com/150"
+      onSubmit={(data) => { alert(`Signup data: ${JSON.stringify(data)}`); return true; }}
+    />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Forgot Password Mode">
+    <UsernamePasswordAuthPage
+      mode="forgotPassword"
+      fields={[{ label: 'Email', type: 'email' }]}
+      logoUrl="https://via.placeholder.com/150"
+      onSubmit={(data) => { alert(`Forgot Password data: ${JSON.stringify(data)}`); return true; }}
+    />
+  </Story>
+</Canvas>
