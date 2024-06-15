@@ -42,7 +42,7 @@ describe('OTP Authentication Page', () => {
     );
 
     const otpInput = screen.getByLabelText('OTP') as HTMLInputElement;
-    const verifyButton = screen.getByRole('button', { name: /verify otp/i });
+    const verifyButton = screen.getByText('Verify OTP');
 
     fireEvent.change(otpInput, { target: { value: '123456' } });
     fireEvent.click(verifyButton);
