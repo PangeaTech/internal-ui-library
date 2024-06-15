@@ -1,0 +1,33 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as TextField from "./textField.stories.tsx";
+
+<Meta of={TextField} title="TextField" />
+
+# TextField
+
+TextField component with different props.
+
+#### Example
+
+<Canvas of={TextField.Primary} />
+
+## Usage
+
+```ts
+import {TextField} from "sld-ui";
+
+const Example = () => {
+  return (
+      <TextField
+        placeholder={"Type here"}
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **placeholder** _`() => void`_ - A string that represents the placeholder content of the text field.
