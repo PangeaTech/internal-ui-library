@@ -15,6 +15,10 @@
       "npm run test"
     ]
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/PangeaTech/internal-ui-library.git"
+  },
   "publishConfig": {
     "access": "public"
   },
