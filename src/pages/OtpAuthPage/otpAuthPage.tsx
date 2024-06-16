@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 interface Field {
   label: string;
@@ -18,7 +18,7 @@ const OtpAuthPage: React.FC<OtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, o
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [otpSent, setOtpSent] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleSendOtp = () => {
     if (onSendOtp(email)) {
@@ -29,7 +29,7 @@ const OtpAuthPage: React.FC<OtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, o
   const handleVerifyOtp = () => {
     const token = onVerifyOtp(otp);
     if (token) {
-      navigate('/home', { state: { token } });
+      // navigate('/home', { state: { token } });
     }
   };
 
@@ -48,15 +48,12 @@ const OtpAuthPage: React.FC<OtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, o
           margin="normal"
         />
       ))}
-      {!otpSent ? (
-        <Button onClick={handleSendOtp} variant="contained" color="primary">
+        <Button onClick={handleSendOtp} variant="contained" color="primary" disabled={otpSent}>
           Send OTP
         </Button>
-      ) : (
-        <Button onClick={handleVerifyOtp} variant="contained" color="secondary" className="mt-4">
+        <Button onClick={handleVerifyOtp} variant="contained" color="secondary" className="mt-4" disabled={!otpSent}>
           Verify OTP
         </Button>
-      )}
     </div>
   );
 }

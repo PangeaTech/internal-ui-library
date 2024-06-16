@@ -6,7 +6,7 @@ import TextField from "../textField";
 describe("TextField component", () => {
   it("TextField should render correctly", () => {
     render(<TextField />);
-    const text_field = screen.getByRole("textField");
+    const text_field = screen.getByRole("textbox");
     expect(text_field).toBeInTheDocument();
   });
 });
