@@ -16,6 +16,9 @@
       "npm run test"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
