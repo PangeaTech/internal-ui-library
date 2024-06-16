@@ -1,5 +1,5 @@
 {
-  "name": "@pangeatech/ui_library",
+  "name": "@pangeatech-admin/ui_library",
   "version": "0.0.0",
   "type": "module",
   "main": "dist/index.cjs.js",
