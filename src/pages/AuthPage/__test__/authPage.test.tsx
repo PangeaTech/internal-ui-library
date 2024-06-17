@@ -1,12 +1,12 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import UsernamePasswordAuthPage from '../traditionalAuthPage';
+import AuthPage from '../AuthPage';
 
 describe('Username Password Authentication Page', () => {
   it('should render username/password authentication form', async () => {
     render(
-      <UsernamePasswordAuthPage
+      <AuthPage
         mode="login"
         fields={[
           { label: 'Username', type: 'text' },

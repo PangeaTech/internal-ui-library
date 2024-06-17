@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
-// import { useNavigate } from 'react-router-dom';
 
 interface Field {
   label: string;
   type: string;
 }
 
-export interface OtpAuthPageProps {
+export interface IOtpAuthPageProps {
   fields: Field[];
   logoUrl: string;
   onSendOtp: (email: string) => boolean;
   onVerifyOtp: (otp: string) => string;
 }
 
-const OtpAuthPage: React.FC<OtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, onVerifyOtp }) => {
+const OtpAuthPage: React.FC<IOtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, onVerifyOtp }) => {
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [otpSent, setOtpSent] = useState(false);
-  // const navigate = useNavigate();
 
   const handleSendOtp = () => {
     if (onSendOtp(email)) {

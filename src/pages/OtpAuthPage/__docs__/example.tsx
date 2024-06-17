@@ -1,5 +1,5 @@
 import React from 'react';
-import OtpAuthPage from '../otpAuthPage';
+import OtpAuthPage from '../OtpAuthPage';
 
 const OtpAuthPageExample = () => {
   const handleSendOtp = (email: string): boolean => {

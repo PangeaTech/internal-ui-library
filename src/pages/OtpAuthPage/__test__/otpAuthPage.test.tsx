@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import OtpAuthPage from '../otpAuthPage';
+import OtpAuthPage from '../OtpAuthPage';
 
 describe('OTP Authentication Page', () => {
   it('should render OTP authentication form', () => {

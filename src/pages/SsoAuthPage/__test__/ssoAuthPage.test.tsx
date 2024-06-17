@@ -1,12 +1,12 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import MicrosoftSsoAuthPage from '../SsoAuthPage';
+import SsoAuthPage from '../SsoAuthPage';
 
 describe('Microsoft SSO Authentication Page', () => {
   it('should render Microsoft SSO authentication button', async () => {
     render(
-      <MicrosoftSsoAuthPage
+      <SsoAuthPage
         buttonLabel="Login with Microsoft"
         logoUrl="https://via.placeholder.com/150"
         onLogin={() => 'user-token'}

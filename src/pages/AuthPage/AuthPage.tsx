@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
-// import { useNavigate } from 'react-router-dom';
 
 interface Field {
   label: string;
   type: string;
 }
 
-export interface UsernamePasswordAuthPageProps {
+export interface IAuthPageProps {
   mode: 'login' | 'signup' | 'forgotPassword';
   fields: Field[];
   logoUrl: string;
   onSubmit: (data: { [key: string]: string }) => boolean;
 }
 
-const UsernamePasswordAuthPage: React.FC<UsernamePasswordAuthPageProps> = ({ mode, fields, logoUrl, onSubmit }) => {
+const AuthPage: React.FC<IAuthPageProps> = ({ mode, fields, logoUrl, onSubmit }) => {
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
-//   const navigate = useNavigate();
 
   const handleChange = (label: string, value: string) => {
     setFormData({ ...formData, [label]: value });
@@ -55,4 +53,4 @@ const UsernamePasswordAuthPage: React.FC<UsernamePasswordAuthPageProps> = ({ mod
   );
 }
 
-export default UsernamePasswordAuthPage;
+export default AuthPage;

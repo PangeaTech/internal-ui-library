@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import OtpAuthPage, { OtpAuthPageProps } from '../otpAuthPage';
+import OtpAuthPage, { IOtpAuthPageProps } from '../OtpAuthPage';
 
 export default {
   title: 'Auth/OtpAuthPage',
@@ -12,9 +12,9 @@ export default {
       },
     },
   },
-} as Meta<OtpAuthPageProps>;
+} as Meta<IOtpAuthPageProps>;
 
-export const Default: StoryObj<OtpAuthPageProps> = {
+export const Default: StoryObj<IOtpAuthPageProps> = {
   args: {
     fields: [
       { label: 'Email', type: 'email' },

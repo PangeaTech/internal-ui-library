@@ -1,14 +1,14 @@
 import React from 'react';
-import MicrosoftSsoAuthPage from '../SsoAuthPage';
+import SsoAuthPage from '../SsoAuthPage';
 
-const MicrosoftSsoAuthPageExample = () => {
+const SsoAuthPageExample = () => {
   const handleLogin = (): string => {
     alert('Logged in with Microsoft');
     return 'user-token';
   };
 
   return (
-    <MicrosoftSsoAuthPage
+    <SsoAuthPage
       buttonLabel="Login with Microsoft"
       logoUrl="https://via.placeholder.com/150"
       onLogin={handleLogin}
@@ -16,4 +16,4 @@ const MicrosoftSsoAuthPageExample = () => {
   );
 };
 
-export default MicrosoftSsoAuthPageExample;
+export default SsoAuthPageExample;

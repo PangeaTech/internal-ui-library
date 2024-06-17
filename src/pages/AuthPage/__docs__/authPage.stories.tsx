@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import UsernamePasswordAuthPage, { UsernamePasswordAuthPageProps } from '../traditionalAuthPage';
+import AuthPage, { IAuthPageProps } from '../AuthPage';
 
 export default {
-  title: 'Auth/UsernamePasswordAuthPage',
-  component: UsernamePasswordAuthPage,
+  title: 'Auth/AuthPage',
+  component: AuthPage,
   parameters: {
     docs: {
       description: {
@@ -12,9 +12,9 @@ export default {
       },
     },
   },
-} as Meta<UsernamePasswordAuthPageProps>;
+} as Meta<IAuthPageProps>;
 
-export const LoginMode: StoryObj<UsernamePasswordAuthPageProps> = {
+export const LoginMode: StoryObj<IAuthPageProps> = {
   args: {
     mode: 'login',
     fields: [
@@ -29,7 +29,7 @@ export const LoginMode: StoryObj<UsernamePasswordAuthPageProps> = {
   },
 };
 
-export const SignupMode: StoryObj<UsernamePasswordAuthPageProps> = {
+export const SignupMode: StoryObj<IAuthPageProps> = {
   args: {
     mode: 'signup',
     fields: [
@@ -45,7 +45,7 @@ export const SignupMode: StoryObj<UsernamePasswordAuthPageProps> = {
   },
 };
 
-export const ForgotPasswordMode: StoryObj<UsernamePasswordAuthPageProps> = {
+export const ForgotPasswordMode: StoryObj<IAuthPageProps> = {
   args: {
     mode: 'forgotPassword',
     fields: [

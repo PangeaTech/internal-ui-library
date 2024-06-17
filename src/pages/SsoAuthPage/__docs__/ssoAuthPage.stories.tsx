@@ -1,10 +1,9 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import MicrosoftSsoAuthPage, { MicrosoftSsoAuthPageProps } from '../SsoAuthPage';
+import SsoAuthPage, { SsoAuthPageProps } from '../SsoAuthPage';
 
 export default {
   title: 'Auth/MicrosoftSsoAuthPage',
-  component: MicrosoftSsoAuthPage,
+  component: SsoAuthPage,
   parameters: {
     docs: {
       description: {
@@ -12,9 +11,9 @@ export default {
       },
     },
   },
-} as Meta<MicrosoftSsoAuthPageProps>;
+} as Meta<SsoAuthPageProps>;
 
-export const Default: StoryObj<MicrosoftSsoAuthPageProps> = {
+export const Default: StoryObj<SsoAuthPageProps> = {
   args: {
     buttonLabel: 'Login with Microsoft',
     logoUrl: 'https://via.placeholder.com/150',

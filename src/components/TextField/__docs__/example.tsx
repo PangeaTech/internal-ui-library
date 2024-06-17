@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import TextField, { ITextFieldProps } from "../textField";
+import TextField, { ITextFieldProps } from "../TextField";
 
 const Example: FC<ITextFieldProps> = ({
   placeholder = "Type Here",

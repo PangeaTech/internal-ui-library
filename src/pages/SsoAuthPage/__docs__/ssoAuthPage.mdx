@@ -1,7 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import MicrosoftSsoAuthPage from '../SsoAuthPage';
+import SsoAuthPage from '../SsoAuthPage';
 
-<Meta title="Microsoft SSO Authentication" component={MicrosoftSsoAuthPage} />
+<Meta title="Microsoft SSO Authentication" component={SsoAuthPage} />
 
 # Microsoft SSO Login
 
@@ -15,7 +15,7 @@ This component enables Single Sign-On (SSO) using Microsoft login for users with
 
 <Canvas>
   <Story name="Default">
-    <MicrosoftSsoAuthPage
+    <SsoAuthPage
       buttonLabel="Login with Microsoft"
       logoUrl="https://via.placeholder.com/150"
       onLogin={() => { alert('Logged in with Microsoft'); return 'user-token'; }}
