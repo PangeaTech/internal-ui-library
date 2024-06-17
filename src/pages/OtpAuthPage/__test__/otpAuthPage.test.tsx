@@ -1,6 +1,7 @@
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+
 import OtpAuthPage from '../OtpAuthPage';
 
 describe('OTP Authentication Page', () => {
@@ -9,7 +10,7 @@ describe('OTP Authentication Page', () => {
       <OtpAuthPage
         fields={[
           { label: 'Email', type: 'email' },
-          { label: 'OTP', type: 'text' },
+          { label: 'OTP', type: 'text' }
         ]}
         logoUrl="https://via.placeholder.com/150"
         onSendOtp={() => true}
@@ -18,7 +19,6 @@ describe('OTP Authentication Page', () => {
     );
 
     const emailInput = screen.getByLabelText('Email') as HTMLInputElement;
-    const otpInput = screen.getByLabelText('OTP') as HTMLInputElement;
     const sendButton = screen.getByText('Send OTP');
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
@@ -33,7 +33,7 @@ describe('OTP Authentication Page', () => {
       <OtpAuthPage
         fields={[
           { label: 'Email', type: 'email' },
-          { label: 'OTP', type: 'text' },
+          { label: 'OTP', type: 'text' }
         ]}
         logoUrl="https://via.placeholder.com/150"
         onSendOtp={() => true}

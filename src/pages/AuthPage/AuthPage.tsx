@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
+import React, { useState } from 'react';
 
 interface Field {
   label: string;
@@ -24,7 +24,7 @@ const AuthPage: React.FC<IAuthPageProps> = ({ mode, fields, logoUrl, onSubmit })
     if (onSubmit(formData)) {
       if (mode === 'login') {
         // navigate('/home');
-        console.log('login')
+        console.log('login');
       } else {
         alert('Operation successful');
       }
@@ -51,6 +51,6 @@ const AuthPage: React.FC<IAuthPageProps> = ({ mode, fields, logoUrl, onSubmit })
       </Button>
     </div>
   );
-}
+};
 
 export default AuthPage;

@@ -1,9 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import Example from "./example";
+import type { Meta, StoryObj } from '@storybook/react';
+
+import Example from './example';
 
 const meta: Meta<typeof Example> = {
-  title: "Text Field",
-  component: Example,
+  title: 'Text Field',
+  component: Example
 };
 
 export default meta;
@@ -11,11 +12,11 @@ type Story = StoryObj<typeof Example>;
 
 export const Primary: Story = {
   args: {
-    placeholder: "Type Here",
-  },
+    placeholder: 'Type Here'
+  }
 };
 export const Secondary: Story = {
   args: {
-    placeholder: "Enter your name",
-  },
+    placeholder: 'Enter your name'
+  }
 };

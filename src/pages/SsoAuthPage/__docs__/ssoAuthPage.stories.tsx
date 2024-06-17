@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
+
 import SsoAuthPage, { SsoAuthPageProps } from '../SsoAuthPage';
 
 export default {
@@ -7,10 +8,10 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Component for Microsoft Single Sign-On (SSO) authentication.',
-      },
-    },
-  },
+        component: 'Component for Microsoft Single Sign-On (SSO) authentication.'
+      }
+    }
+  }
 } as Meta<SsoAuthPageProps>;
 
 export const Default: StoryObj<SsoAuthPageProps> = {
@@ -20,6 +21,6 @@ export const Default: StoryObj<SsoAuthPageProps> = {
     onLogin: () => {
       alert('Logged in with Microsoft');
       return 'user-token';
-    },
-  },
+    }
+  }
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import OtpAuthPage from '../OtpAuthPage';
 
 const OtpAuthPageExample = () => {
@@ -14,7 +15,10 @@ const OtpAuthPageExample = () => {
 
   return (
     <OtpAuthPage
-      fields={[{ label: 'Email', type: 'email' }, { label: 'OTP', type: 'text' }]}
+      fields={[
+        { label: 'Email', type: 'email' },
+        { label: 'OTP', type: 'text' }
+      ]}
       logoUrl="https://via.placeholder.com/150"
       onSendOtp={handleSendOtp}
       onVerifyOtp={handleVerifyOtp}

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SsoAuthPage from '../SsoAuthPage';
 
 const SsoAuthPageExample = () => {
@@ -7,13 +8,7 @@ const SsoAuthPageExample = () => {
     return 'user-token';
   };
 
-  return (
-    <SsoAuthPage
-      buttonLabel="Login with Microsoft"
-      logoUrl="https://via.placeholder.com/150"
-      onLogin={handleLogin}
-    />
-  );
+  return <SsoAuthPage buttonLabel="Login with Microsoft" logoUrl="https://via.placeholder.com/150" onLogin={handleLogin} />;
 };
 
 export default SsoAuthPageExample;

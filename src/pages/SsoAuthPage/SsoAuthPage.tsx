@@ -1,5 +1,5 @@
-import React from 'react';
 import { Button } from '@mui/material';
+import React from 'react';
 
 export interface ISsoAuthPageProps {
   buttonLabel: string;
@@ -8,12 +8,10 @@ export interface ISsoAuthPageProps {
 }
 
 const SsoAuthPage: React.FC<ISsoAuthPageProps> = ({ buttonLabel, logoUrl, onLogin }) => {
-
-
   const handleLogin = () => {
     const token = onLogin();
     if (token) {
-    //   navigate('/home', { state: { token } });
+      //   navigate('/home', { state: { token } });
     }
   };
 
@@ -25,6 +23,6 @@ const SsoAuthPage: React.FC<ISsoAuthPageProps> = ({ buttonLabel, logoUrl, onLogi
       </Button>
     </div>
   );
-}
+};
 
 export default SsoAuthPage;

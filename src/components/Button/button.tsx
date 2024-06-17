@@ -1,5 +1,5 @@
-import React from "react";
-import { ButtonProps, default as MuiButton } from "@mui/material/Button";
+import { ButtonProps, default as MuiButton } from '@mui/material/Button';
+import React from 'react';
 
 // Define custom prop types
 export interface IButtonProps extends ButtonProps {

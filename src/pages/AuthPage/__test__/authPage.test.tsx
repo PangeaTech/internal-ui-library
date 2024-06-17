@@ -1,6 +1,7 @@
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+
 import AuthPage from '../AuthPage';
 
 describe('Username Password Authentication Page', () => {
@@ -10,10 +11,10 @@ describe('Username Password Authentication Page', () => {
         mode="login"
         fields={[
           { label: 'Username', type: 'text' },
-          { label: 'Password', type: 'password' },
+          { label: 'Password', type: 'password' }
         ]}
         logoUrl="https://via.placeholder.com/150"
-        onSubmit={(data) => true}
+        onSubmit={(_data) => true}
       />
     );
 

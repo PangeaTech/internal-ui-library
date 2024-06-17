@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
+import React, { useState } from 'react';
 
 interface Field {
   label: string;
@@ -40,20 +40,20 @@ const OtpAuthPage: React.FC<IOtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, 
           label={field.label}
           type={field.type}
           value={field.label === 'Email' ? email : otp}
-          onChange={(e) => field.label === 'Email' ? setEmail(e.target.value) : setOtp(e.target.value)}
+          onChange={(e) => (field.label === 'Email' ? setEmail(e.target.value) : setOtp(e.target.value))}
           variant="outlined"
           fullWidth
           margin="normal"
         />
       ))}
-        <Button onClick={handleSendOtp} variant="contained" color="primary" disabled={otpSent}>
-          Send OTP
-        </Button>
-        <Button onClick={handleVerifyOtp} variant="contained" color="secondary" className="mt-4" disabled={!otpSent}>
-          Verify OTP
-        </Button>
+      <Button onClick={handleSendOtp} variant="contained" color="primary" disabled={otpSent}>
+        Send OTP
+      </Button>
+      <Button onClick={handleVerifyOtp} variant="contained" color="secondary" className="mt-4" disabled={!otpSent}>
+        Verify OTP
+      </Button>
     </div>
   );
-}
+};
 
 export default OtpAuthPage;

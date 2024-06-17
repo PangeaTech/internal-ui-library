@@ -1,21 +1,18 @@
-import React, { FC } from "react";
-import TextField, { ITextFieldProps } from "../TextField";
+import React, { FC } from 'react';
 
-const Example: FC<ITextFieldProps> = ({
-  placeholder = "Type Here",
-}) => {
+import TextField, { ITextFieldProps } from '../TextField';
+
+const Example: FC<ITextFieldProps> = ({ placeholder = 'Type Here' }) => {
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100%",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%'
       }}
     >
-      <TextField
-        placeholder={placeholder}
-      />
+      <TextField placeholder={placeholder} />
     </div>
   );
 };

@@ -1,5 +1,6 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
+
 import OtpAuthPage, { IOtpAuthPageProps } from '../OtpAuthPage';
 
 export default {
@@ -8,17 +9,17 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Component for OTP verification via email.',
-      },
-    },
-  },
+        component: 'Component for OTP verification via email.'
+      }
+    }
+  }
 } as Meta<IOtpAuthPageProps>;
 
 export const Default: StoryObj<IOtpAuthPageProps> = {
   args: {
     fields: [
       { label: 'Email', type: 'email' },
-      { label: 'OTP', type: 'text' },
+      { label: 'OTP', type: 'text' }
     ],
     logoUrl: 'https://via.placeholder.com/150',
     onSendOtp: (email) => {
@@ -28,6 +29,6 @@ export const Default: StoryObj<IOtpAuthPageProps> = {
     onVerifyOtp: (otp) => {
       alert(`OTP verified: ${otp}`);
       return 'user-token';
-    },
-  },
+    }
+  }
 };
