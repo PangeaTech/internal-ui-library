@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
+import { configDefaults } from 'vitest/config';
 import dts from 'vite-plugin-dts';
 
 import { peerDependencies } from './package.json';
@@ -21,7 +22,11 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './setupTests.ts'
+    setupFiles: './setupTests.ts',
+    exclude: [
+      ...configDefaults.exclude,
+     '**/.storybook/**'
+    ]
   },
   plugins: [dts()] // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
 });
