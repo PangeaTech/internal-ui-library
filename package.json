@@ -12,9 +12,9 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "npm run format",
-      "npm run lint",
-      "npm run test"
-    ]
+      "npm run lint"
+    ],
+    "*.test.tsx": "npm run test"
   },
   "scripts": {
     "dev": "vite",
