@@ -1,21 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import Example from "./example";
+import type { Meta, StoryObj } from '@storybook/react';
+import TextField from '../TextField';
 
-const meta: Meta<typeof Example> = {
-  title: "Text Field",
-  component: Example,
+const meta: Meta<typeof TextField> = {
+  title: 'Components/TextField',
+  component: TextField,
 };
 
 export default meta;
-type Story = StoryObj<typeof Example>;
 
-export const Primary: Story = {
+type Story = StoryObj<typeof TextField>;
+
+export const Default: Story = {
   args: {
-    placeholder: "Type Here",
-  },
-};
-export const Secondary: Story = {
-  args: {
-    placeholder: "Enter your name",
+    label: 'Example TextField',
+    value: '',
+    onChange: (e) => console.log(e.target.value),
   },
 };

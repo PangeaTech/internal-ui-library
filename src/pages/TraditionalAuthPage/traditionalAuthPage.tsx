@@ -7,14 +7,14 @@ interface Field {
   type: string;
 }
 
-export interface UsernamePasswordAuthPageProps {
+export interface ITraditionalAuthPageProps {
   mode: 'login' | 'signup' | 'forgotPassword';
   fields: Field[];
   logoUrl: string;
   onSubmit: (data: { [key: string]: string }) => boolean;
 }
 
-const UsernamePasswordAuthPage: React.FC<UsernamePasswordAuthPageProps> = ({ mode, fields, logoUrl, onSubmit }) => {
+const TraditionalAuthPage: React.FC<ITraditionalAuthPageProps> = ({ mode, fields, logoUrl, onSubmit }) => {
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
 //   const navigate = useNavigate();
 
@@ -55,4 +55,4 @@ const UsernamePasswordAuthPage: React.FC<UsernamePasswordAuthPageProps> = ({ mod
   );
 }
 
-export default UsernamePasswordAuthPage;
+export default TraditionalAuthPage;

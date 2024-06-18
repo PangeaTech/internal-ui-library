@@ -1,1 +1,1 @@
-export {default as OtpAuthPage} from './otpAuthPage'
+export {default as OtpAuthPage} from './OtpAuthPage'

@@ -2,13 +2,13 @@ import React from 'react';
 import { Button } from '@mui/material';
 // import { useNavigate } from 'react-router-dom';
 
-export interface MicrosoftSsoAuthPageProps {
+export interface ISsoAuthPageProps {
   buttonLabel: string;
   logoUrl: string;
   onLogin: () => string;
 }
 
-const MicrosoftSsoAuthPage: React.FC<MicrosoftSsoAuthPageProps> = ({ buttonLabel, logoUrl, onLogin }) => {
+const SsoAuthPage: React.FC<ISsoAuthPageProps> = ({ buttonLabel, logoUrl, onLogin }) => {
 //   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -28,4 +28,4 @@ const MicrosoftSsoAuthPage: React.FC<MicrosoftSsoAuthPageProps> = ({ buttonLabel
   );
 }
 
-export default MicrosoftSsoAuthPage;
+export default SsoAuthPage;

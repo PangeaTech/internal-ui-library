@@ -1,1 +1,1 @@
-export {default as UsernamePasswordAuthPage} from './traditionalAuthPage';
+export {default as UsernamePasswordAuthPage} from './TraditionalAuthPage';

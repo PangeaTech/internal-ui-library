@@ -1,23 +1,15 @@
-import React, { FC } from "react";
-import TextField, { ITextFieldProps } from "../textField";
+import React, { useState } from 'react';
+import TextField from '../TextField';
 
-const Example: FC<ITextFieldProps> = ({
-  placeholder = "Type Here",
-}) => {
+const TextFieldExample: React.FC = () => {
+  const [value, setValue] = useState('');
+
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100%",
-      }}
-    >
-      <TextField
-        placeholder={placeholder}
-      />
+    <div>
+      <TextField label="Example TextField" value={value} onChange={(e) => setValue(e.target.value)} />
+      <p>Entered Value: {value}</p>
     </div>
   );
 };
 
-export default Example;
+export default TextFieldExample;
