@@ -1,5 +1,5 @@
-import React from 'react';
-import {default as MUIButton, ButtonProps } from '@mui/material/Button';
+import React from "react";
+import { default as MUIButton, ButtonProps } from "@mui/material/Button";
 
 // Define custom prop types
 export interface IButtonProps extends ButtonProps {
@@ -7,11 +7,7 @@ export interface IButtonProps extends ButtonProps {
 }
 
 const Button: React.FC<IButtonProps> = ({ text, ...props }) => {
-  return (
-    <MUIButton {...props}>
-      {text}
-    </MUIButton>
-  );
+  return <MUIButton {...props}>{text}</MUIButton>;
 };
 
 export default Button;

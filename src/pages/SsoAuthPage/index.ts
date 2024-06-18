@@ -1,1 +1,1 @@
-export {default as MicrosoftSsoAuthPage} from './SsoAuthPage';
+export { default as MicrosoftSsoAuthPage } from "./SsoAuthPage";

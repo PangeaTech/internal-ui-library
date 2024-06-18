@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '@mui/material';
+import React from "react";
+import { Button } from "@mui/material";
 // import { useNavigate } from 'react-router-dom';
 
 export interface ISsoAuthPageProps {
@@ -8,13 +8,17 @@ export interface ISsoAuthPageProps {
   onLogin: () => string;
 }
 
-const SsoAuthPage: React.FC<ISsoAuthPageProps> = ({ buttonLabel, logoUrl, onLogin }) => {
-//   const navigate = useNavigate();
+const SsoAuthPage: React.FC<ISsoAuthPageProps> = ({
+  buttonLabel,
+  logoUrl,
+  onLogin,
+}) => {
+  //   const navigate = useNavigate();
 
   const handleLogin = () => {
     const token = onLogin();
     if (token) {
-    //   navigate('/home', { state: { token } });
+      //   navigate('/home', { state: { token } });
     }
   };
 
@@ -26,6 +30,6 @@ const SsoAuthPage: React.FC<ISsoAuthPageProps> = ({ buttonLabel, logoUrl, onLogi
       </Button>
     </div>
   );
-}
+};
 
 export default SsoAuthPage;
