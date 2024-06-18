@@ -1,5 +1,6 @@
-import React from 'react';
-import UsernamePasswordAuthPage from '../traditionalAuthPage';
+import React from "react";
+
+import UsernamePasswordAuthPage from "../AuthPage";
 
 const UsernamePasswordAuthPageExample = () => {
   const handleSubmit = (data: { [key: string]: string }): boolean => {
@@ -11,19 +12,26 @@ const UsernamePasswordAuthPageExample = () => {
     <>
       <UsernamePasswordAuthPage
         mode="login"
-        fields={[{ label: 'Username', type: 'text' }, { label: 'Password', type: 'password' }]}
+        fields={[
+          { label: "Username", type: "text" },
+          { label: "Password", type: "password" },
+        ]}
         logoUrl="https://via.placeholder.com/150"
         onSubmit={handleSubmit}
       />
       <UsernamePasswordAuthPage
         mode="signup"
-        fields={[{ label: 'Username', type: 'text' }, { label: 'Password', type: 'password' }, { label: 'Email', type: 'email' }]}
+        fields={[
+          { label: "Username", type: "text" },
+          { label: "Password", type: "password" },
+          { label: "Email", type: "email" },
+        ]}
         logoUrl="https://via.placeholder.com/150"
         onSubmit={handleSubmit}
       />
       <UsernamePasswordAuthPage
         mode="forgotPassword"
-        fields={[{ label: 'Email', type: 'email' }]}
+        fields={[{ label: "Email", type: "email" }]}
         logoUrl="https://via.placeholder.com/150"
         onSubmit={handleSubmit}
       />

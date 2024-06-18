@@ -1,7 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import UsernamePasswordAuthPage from '../TraditionalAuthPage';
+import AuthPage from '../AuthPage';
 
-<Meta title="Username Password Authentication" component={UsernamePasswordAuthPage} />
+<Meta title="Username Password Authentication" component={AuthPage} />
 
 # Username Password Login
 
@@ -16,7 +16,7 @@ This component facilitates traditional username/password authentication, user si
 
 <Canvas>
   <Story name="Login Mode">
-    <UsernamePasswordAuthPage
+    <AuthPage
       mode="login"
       fields={[{ label: 'Username', type: 'text' }, { label: 'Password', type: 'password' }]}
       logoUrl="https://via.placeholder.com/150"
@@ -27,7 +27,7 @@ This component facilitates traditional username/password authentication, user si
 
 <Canvas>
   <Story name="Signup Mode">
-    <UsernamePasswordAuthPage
+    <AuthPage
       mode="signup"
       fields={[{ label: 'Username', type: 'text' }, { label: 'Password', type: 'password' }, { label: 'Email', type: 'email' }]}
       logoUrl="https://via.placeholder.com/150"
@@ -38,7 +38,7 @@ This component facilitates traditional username/password authentication, user si
 
 <Canvas>
   <Story name="Forgot Password Mode">
-    <UsernamePasswordAuthPage
+    <AuthPage
       mode="forgotPassword"
       fields={[{ label: 'Email', type: 'email' }]}
       logoUrl="https://via.placeholder.com/150"

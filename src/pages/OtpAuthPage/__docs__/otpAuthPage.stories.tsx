@@ -1,14 +1,13 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import OtpAuthPage, { IOtpAuthPageProps } from '../otpAuthPage';
+import { Meta, StoryObj } from "@storybook/react";
+import OtpAuthPage, { IOtpAuthPageProps } from "../OtpAuthPage";
 
 export default {
-  title: 'Auth/OtpAuthPage',
+  title: "Auth/OtpAuthPage",
   component: OtpAuthPage,
   parameters: {
     docs: {
       description: {
-        component: 'Component for OTP verification via email.',
+        component: "Component for OTP verification via email.",
       },
     },
   },
@@ -17,17 +16,17 @@ export default {
 export const Default: StoryObj<IOtpAuthPageProps> = {
   args: {
     fields: [
-      { label: 'Email', type: 'email' },
-      { label: 'OTP', type: 'text' },
+      { label: "Email", type: "email" },
+      { label: "OTP", type: "text" },
     ],
-    logoUrl: 'https://via.placeholder.com/150',
+    logoUrl: "https://via.placeholder.com/150",
     onSendOtp: (email) => {
       alert(`OTP sent to ${email}`);
       return true;
     },
     onVerifyOtp: (otp) => {
       alert(`OTP verified: ${otp}`);
-      return 'user-token';
+      return "user-token";
     },
   },
 };

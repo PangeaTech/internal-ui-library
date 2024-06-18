@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
-import { Button, TextField } from '@mui/material';
-// import { useNavigate } from 'react-router-dom';
+import { Button, TextField } from "@mui/material";
+import React, { useState } from "react";
 
 interface Field {
   label: string;
   type: string;
 }
 
-export interface ITraditionalAuthPageProps {
-  mode: 'login' | 'signup' | 'forgotPassword';
+export interface IAuthPageProps {
+  mode: "login" | "signup" | "forgotPassword";
   fields: Field[];
   logoUrl: string;
   onSubmit: (data: { [key: string]: string }) => boolean;
 }
 
-const TraditionalAuthPage: React.FC<ITraditionalAuthPageProps> = ({ mode, fields, logoUrl, onSubmit }) => {
+const AuthPage: React.FC<IAuthPageProps> = ({
+  mode,
+  fields,
+  logoUrl,
+  onSubmit,
+}) => {
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
-//   const navigate = useNavigate();
 
   const handleChange = (label: string, value: string) => {
     setFormData({ ...formData, [label]: value });
@@ -24,11 +27,11 @@ const TraditionalAuthPage: React.FC<ITraditionalAuthPageProps> = ({ mode, fields
 
   const handleSubmit = () => {
     if (onSubmit(formData)) {
-      if (mode === 'login') {
+      if (mode === "login") {
         // navigate('/home');
-        console.log('login')
+        console.log("login");
       } else {
-        alert('Operation successful');
+        alert("Operation successful");
       }
     }
   };
@@ -41,7 +44,7 @@ const TraditionalAuthPage: React.FC<ITraditionalAuthPageProps> = ({ mode, fields
           key={index}
           label={field.label}
           type={field.type}
-          value={formData[field.label] || ''}
+          value={formData[field.label] || ""}
           onChange={(e) => handleChange(field.label, e.target.value)}
           variant="outlined"
           fullWidth
@@ -49,10 +52,14 @@ const TraditionalAuthPage: React.FC<ITraditionalAuthPageProps> = ({ mode, fields
         />
       ))}
       <Button onClick={handleSubmit} variant="contained" color="primary">
-        {mode === 'login' ? 'Login' : mode === 'signup' ? 'Sign Up' : 'Reset Password'}
+        {mode === "login"
+          ? "Login"
+          : mode === "signup"
+            ? "Sign Up"
+            : "Reset Password"}
       </Button>
     </div>
   );
-}
+};
 
-export default TraditionalAuthPage;
+export default AuthPage;
