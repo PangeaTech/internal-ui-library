@@ -1,8 +1,8 @@
 import React from "react";
 
-import UsernamePasswordAuthPage from "../AuthPage";
+import AuthPage from "../AuthPage";
 
-const UsernamePasswordAuthPageExample = () => {
+const AuthPageExample = () => {
   const handleSubmit = (data: { [key: string]: string }): boolean => {
     alert(`Data submitted: ${JSON.stringify(data)}`);
     return true;
@@ -10,7 +10,7 @@ const UsernamePasswordAuthPageExample = () => {
 
   return (
     <>
-      <UsernamePasswordAuthPage
+      <AuthPage
         mode="login"
         fields={[
           { label: "Username", type: "text" },
@@ -19,7 +19,7 @@ const UsernamePasswordAuthPageExample = () => {
         logoUrl="https://via.placeholder.com/150"
         onSubmit={handleSubmit}
       />
-      <UsernamePasswordAuthPage
+      <AuthPage
         mode="signup"
         fields={[
           { label: "Username", type: "text" },
@@ -29,7 +29,7 @@ const UsernamePasswordAuthPageExample = () => {
         logoUrl="https://via.placeholder.com/150"
         onSubmit={handleSubmit}
       />
-      <UsernamePasswordAuthPage
+      <AuthPage
         mode="forgotPassword"
         fields={[{ label: "Email", type: "email" }]}
         logoUrl="https://via.placeholder.com/150"
@@ -39,4 +39,4 @@ const UsernamePasswordAuthPageExample = () => {
   );
 };
 
-export default UsernamePasswordAuthPageExample;
+export default AuthPageExample;
