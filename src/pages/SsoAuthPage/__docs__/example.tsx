@@ -1,10 +1,10 @@
-import React from 'react';
-import MicrosoftSsoAuthPage from '../SsoAuthPage';
+import React from "react";
+import MicrosoftSsoAuthPage from "../SsoAuthPage";
 
 const MicrosoftSsoAuthPageExample = () => {
   const handleLogin = (): string => {
-    alert('Logged in with Microsoft');
-    return 'user-token';
+    alert("Logged in with Microsoft");
+    return "user-token";
   };
 
   return (
