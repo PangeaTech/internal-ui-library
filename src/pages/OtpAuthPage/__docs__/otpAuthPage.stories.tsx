@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import OtpAuthPage, { IOtpAuthPageProps } from "../OtpAuthPage";
+import OtpAuthPage, { IOtpAuthPageProps } from "../otpAuthPage";
 
 export default {
   title: "Auth/OtpAuthPage",
