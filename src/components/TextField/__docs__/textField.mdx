@@ -1,33 +1,14 @@
-import { Canvas, Meta } from "@storybook/blocks";
-import Example from "./example.tsx";
-import * as TextField from "./textField.stories.tsx";
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Default } from './textField.stories.tsx';
 
-<Meta of={TextField} title="TextField" />
+<Meta of={Default} />
 
 # TextField
 
-TextField component with different props.
+The `TextField` component renders a material-ui text field.
 
-#### Example
-
-<Canvas of={TextField.Primary} />
-
-## Usage
-
-```ts
-import {TextField} from "my-package-name";
-
-const Example = () => {
-  return (
-      <TextField
-        placeholder={"Type here"}
-      />
-  );
-};
-
-export default Example;
-```
-
-#### Arguments
-
-- **placeholder** _`() => void`_ - A string that represents the placeholder content of the text field.
+<Canvas>
+  <Story name="Default">
+    {Default}
+  </Story>
+</Canvas>

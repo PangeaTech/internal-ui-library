@@ -1,7 +1,7 @@
 import { expect } from "vitest";
 import * as matchers from "@testing-library/jest-dom/matchers";
 import { TestingLibraryMatchers } from "@testing-library/jest-dom/matchers";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 declare module "vitest" {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   interface Assertion<T = any>

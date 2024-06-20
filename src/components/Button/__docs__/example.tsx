@@ -1,9 +1,7 @@
 import React, { FC } from "react";
 import Button, { IButtonProps } from "../button";
 
-const Example: FC<IButtonProps> = ({
-  text = "Button",
-}) => {
+const Example: FC<IButtonProps> = ({ text = "Button" }) => {
   return (
     <div
       style={{
@@ -13,9 +11,7 @@ const Example: FC<IButtonProps> = ({
         height: "100%",
       }}
     >
-      <Button
-        text={text}
-      />
+      <Button text={text} />
     </div>
   );
 };

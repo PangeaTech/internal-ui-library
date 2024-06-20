@@ -1,15 +1,33 @@
-import React from 'react';
-import TextField, { BaseTextFieldProps } from '@mui/material/TextField';
+import React, { ChangeEvent, useState } from "react";
+import { BaseTextFieldProps, TextField as MUITextField } from "@mui/material";
 
-// Define custom prop types
-export interface ITextFieldProps extends BaseTextFieldProps {
-  placeholder?: string;
+export interface ITextFieldProps extends Omit<BaseTextFieldProps, "onChange"> {
+  label: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const CustomTextField: React.FC<ITextFieldProps> = ({ placeholder, ...props }) => {
+const TextField: React.FC<ITextFieldProps> = ({
+  label,
+  value,
+  onChange,
+  ...props
+}) => {
+  const [internalValue, setInternalValue] = useState(value);
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setInternalValue(event.target.value);
+    onChange(event);
+  };
+
   return (
-    <TextField {...props}/>
+    <MUITextField
+      label={label}
+      value={internalValue}
+      onChange={handleChange}
+      {...props}
+    />
   );
 };
 
-export default CustomTextField;
+export default TextField;

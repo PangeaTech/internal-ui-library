@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, TextField } from '@mui/material';
+import React, { useState } from "react";
+import { Button, TextField } from "@mui/material";
 // import { useNavigate } from 'react-router-dom';
 
 interface Field {
@@ -7,16 +7,21 @@ interface Field {
   type: string;
 }
 
-export interface OtpAuthPageProps {
+export interface IOtpAuthPageProps {
   fields: Field[];
   logoUrl: string;
   onSendOtp: (email: string) => boolean;
   onVerifyOtp: (otp: string) => string;
 }
 
-const OtpAuthPage: React.FC<OtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, onVerifyOtp }) => {
-  const [email, setEmail] = useState('');
-  const [otp, setOtp] = useState('');
+const OtpAuthPage: React.FC<IOtpAuthPageProps> = ({
+  fields,
+  logoUrl,
+  onSendOtp,
+  onVerifyOtp,
+}) => {
+  const [email, setEmail] = useState("");
+  const [otp, setOtp] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   // const navigate = useNavigate();
 
@@ -41,21 +46,36 @@ const OtpAuthPage: React.FC<OtpAuthPageProps> = ({ fields, logoUrl, onSendOtp, o
           key={index}
           label={field.label}
           type={field.type}
-          value={field.label === 'Email' ? email : otp}
-          onChange={(e) => field.label === 'Email' ? setEmail(e.target.value) : setOtp(e.target.value)}
+          value={field.label === "Email" ? email : otp}
+          onChange={(e) =>
+            field.label === "Email"
+              ? setEmail(e.target.value)
+              : setOtp(e.target.value)
+          }
           variant="outlined"
           fullWidth
           margin="normal"
         />
       ))}
-        <Button onClick={handleSendOtp} variant="contained" color="primary" disabled={otpSent}>
-          Send OTP
-        </Button>
-        <Button onClick={handleVerifyOtp} variant="contained" color="secondary" className="mt-4" disabled={!otpSent}>
-          Verify OTP
-        </Button>
+      <Button
+        onClick={handleSendOtp}
+        variant="contained"
+        color="primary"
+        disabled={otpSent}
+      >
+        Send OTP
+      </Button>
+      <Button
+        onClick={handleVerifyOtp}
+        variant="contained"
+        color="secondary"
+        className="mt-4"
+        disabled={!otpSent}
+      >
+        Verify OTP
+      </Button>
     </div>
   );
-}
+};
 
 export default OtpAuthPage;
