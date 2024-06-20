@@ -1,26 +1,24 @@
-// Define custom prop types
-export interface IPageLoaderProps {
-  message?: string;
-  imageUrl?: string;
+import React from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import Backdrop from "@mui/material/Backdrop";
+
+interface IPageLoaderProps {
+  loadingText: string;
+  isOpen: boolean;
 }
 
-const PageLoader: React.FC<IPageLoaderProps> = () => {
+const PageLoader: React.FC<IPageLoaderProps> = ({ loadingText, isOpen }) => {
   return (
-    <div
-      className={`backdrop-blur-lg absolute content-height w-screen z-50  flex flex-col justify-center items-center`}
+    <Backdrop
+      open={isOpen}
+      className="flex flex-col gap-1 items-center justify-center z-40"
     >
-      <div className="continer">
-        <img
-          src="/media/logos/turtlemoveslogo.png"
-          className="absolute h-32 my-11 mx-8"
-          alt="logo"
-        />
-        <div className="image-container rotating-image">
-          <img src="/media/gif/loaderRing.svg" className="h-56" alt="logo" />
-        </div>
-      </div>
-      <p className="mt-4 font-semibold text-base text-pink">Hi loading</p>
-    </div>
+      <Box className="relative">
+        <CircularProgress className="border-2 z-50" />
+      </Box>
+      <p className="text-white font-semibold">{loadingText}</p>
+    </Backdrop>
   );
 };
 
